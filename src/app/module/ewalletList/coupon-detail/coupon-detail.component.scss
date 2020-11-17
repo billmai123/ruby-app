@@ -1,0 +1,38 @@
+.cpDetailMenu{
+    color:white;
+    background-color: rgb(23, 158, 199);
+}
+.cpDetailTitle{
+    margin-left: 5px;
+    font-weight:bold;
+    margin-top:15px;
+}
+.cpDetailSubTitle{
+    margin-left: 5px;
+    color:blue;
+    font-weight: 400;
+    margin-top:15px;
+}
+.cpDetailSubTitle2{
+    margin-left: 20px;
+    color:blue;
+    font-weight: 400;
+    margin-top:15px;
+}
+.cpDetailField{
+    margin-left: 25px;
+}
+.cpDetailFieldValue{
+    text-align: left;
+}
+.cpPanel{
+    border: 1px  #000000   solid;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right:5px;
+}
+.textarea-inherit {
+    width: 100%;
+    overflow: auto;
+    word-break: break-all;
+}

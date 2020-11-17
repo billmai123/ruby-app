@@ -1,0 +1,51 @@
+<div class="page-header">
+    <p class="cpListMenu">Coupon Mgmt System > Redeem Coupon(US008 - Ewallet-List)</p>
+</div>
+<div class="panel panel-default">
+    <p class="cpListTitle">Details</p>
+    <div class="panel-body cpPanel">
+        <table>
+            <tr width="100%">
+                <td width="25%">
+                    <div class="col-12">
+                        <label class="cpListTitle">Customer ID:</label>  <label class="cpListField">{{customerId}}</label>
+                    </div>
+                </td>
+                <td width="25%">
+                    <div class="col-12">
+                        <label class="cpListTitle">Customer Name:</label>  <label class="cpListField">{{customerName}}</label>
+                    </div>
+                </td>
+                <td width="25%"></td>
+
+                <td width="25%"></td>
+            </tr>
+        </table>
+        <table class="cpListTable" width="100%">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>Coupon Instance</td>
+                    <td>Customer Name</td>
+                    <td>Brand</td>
+                    <td>Status</td>
+                    <td>Valid From</td>
+                    <td>Valid To</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cp of couponList">
+                    <td></td>
+                    <td class="linkField"><a [routerLink]="['/coupon',cp.couponCode]">{{cp.id}}</a></td>
+                    <td>{{cp.customer.name}}</td>
+                    <td>{{cp.couponItem.issueBrand}}</td>
+                    <td>{{cp.status}}</td>
+                    <td>{{cp.validFrom}}</td>
+                    <td>{{cp.validTo}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

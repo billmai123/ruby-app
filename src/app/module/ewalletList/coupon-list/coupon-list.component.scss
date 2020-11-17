@@ -1,0 +1,81 @@
+.cpListMenu{
+    color:white;
+    background-color: rgb(23, 158, 199);
+}
+.cpListTitle{
+    margin-left: 5px;
+    font-weight:bold;
+    margin-top:15px;
+}
+.cpListField{
+    margin-left: 25px;
+}
+.cpPanel{
+    border: 1px  #000000   solid;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right:5px;
+}
+.cpListTable table{
+    border: 1px solid #666;
+    width: 100%;
+    margin: 0 0 0 0 !important;
+}
+
+.cpListTable td {
+    padding: 2px 4px 2px 4px !important;
+    text-align: left;
+    vertical-align: top;
+    border: 1px  #000000   solid;
+  }
+
+   .linkField{
+    color: blue;
+    font-weight:bold;
+    text-decoration:underline;
+   }
+
+  .cpListTable thead td{
+      color: blue;
+      font-weight:bold;
+  }
+  
+  .cpListTable thead tr {
+   
+  }
+  
+  
+  .cpListTable th.sorted {
+    background-color: orange;
+  }
+  
+  .cpListTable th a,th a:visited {
+    color: black;
+  }
+  
+  .cpListTable th a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .cpListTable th.sorted a,.cpListTable th.sortable a {
+    background-position: right;
+    display: block;
+    width: 100%;
+  }
+  
+  .cpListTable tr.odd {
+    background-color: #fff
+  }
+  
+  .cpListTable tr.cpListTable,tr.even {
+    background-color: #fea
+  }
+  
+  .cpListTable div.exportlinks {
+    background-color: #eee;
+    border: 1px dotted #999;
+    padding: 2px 4px 2px 4px;
+    margin: 2px 0 10px 0;
+    width: 79%;
+  }

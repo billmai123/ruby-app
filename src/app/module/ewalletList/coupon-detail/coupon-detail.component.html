@@ -1,0 +1,111 @@
+<div class="page-header">
+    <p class="cpDetailMenu">Coupon Mgmt System > Coupon Instance(US008 - Ewallet-Coupon Details)</p>
+</div>
+<div class="panel panel-default" *ngIf="couponDetail!=null">
+    <p class="cpDetailTitle">Details</p>
+    <div class="panel-body cpPanel">
+        <p class="cpDetailSubTitle">Generial Information</p>
+        <table width="100%">
+            <tr>
+               <td width="20%">
+                   <label class="cpDetailField">Coupon Instance ID</label> 
+               </td> 
+               <td width="20%">
+                    <label class="cpDetailFieldValue">{{couponDetail.id}}</label>
+               </td>
+               <td rowspan="3" width="60%">
+                   <label class="cpDetailField">Image URL</label>
+                   <img src="{{couponDetail.couponItem.imageUrl}}" width="400" height="200" alt="" data-baiduimageplus-ignore="1"/>
+               </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="cpDetailField">Name</label>  
+                </td> 
+                <td>
+                    <label class="cpDetailFieldValue">{{couponDetail.couponItem.name}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="cpDetailField">Face Value</label>  
+                </td> 
+                <td>
+                    <label class="cpDetailFieldValue">${{couponDetail.remainingBalance}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="cpDetailField">Description</label>  
+                </td>
+                <td colspan="3">
+                    <textarea class="textarea-inherit" readonly="readonly" cols="3">{{couponDetail.couponItem.description}}
+                    </textarea>
+                </td> 
+            </tr>
+        </table>
+    </div>
+    <p height="5px"></p>
+    <div class="panel-body cpPanel">
+        <p class="cpDetailSubTitle">Terms and Conditions</p>
+        <table width="100%">
+            <tr>
+                <td width="20%">
+                    <label class="cpDetailField">Usage Account</label> 
+                </td> 
+                <td width="20%">
+                    <label class="cpDetailFieldValue" *ngIf="!couponDetail.couponItem.isMultipleUse">Single Use</label>
+                    <label class="cpDetailFieldValue" *ngIf="couponDetail.couponItem.isMultipleUse">Multiple Use</label>
+                </td>
+                <td width="20%"></td>
+                <td width="20%">
+                    <label class="cpDetailField">Minimum Order Amount</label> 
+                </td> 
+                <td width="20%">
+                    <label class="cpDetailFieldValue">${{couponDetail.couponItem.minOrderAmount}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <label class="cpDetailField">Valid From Date</label> 
+                </td> 
+                <td width="20%">
+                    <input type="text" value="{{couponDetail.validFrom}}" readonly="readonly">
+                </td>
+                <td width="20%"></td>
+                <td width="20%">
+                    <label class="cpDetailField">Valid To Date</label> 
+                </td> 
+                <td width="20%">
+                    <input type="text" value="{{couponDetail.validTo}}" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="cpDetailField">Terms and Conditions Details</label>  
+                </td>
+                <td colspan="4">
+                    <textarea class="textarea-inherit" readonly="readonly" cols="3">{{couponDetail.couponItem.tnc}}
+                    </textarea>
+                </td> 
+            </tr>
+        </table>
+    </div>
+    <div>
+        <label class="cpDetailSubTitle2">Status:</label> <b><label class="cpDetailField">{{couponDetail.status}}</label></b>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td><label class="cpDetailSubTitle2">Status:</label> </td>
+                <td><qrcode [qrdata]="'http://www.baidu.com'" [size]="200" [level]="'M'"></qrcode></td>
+            </tr>
+        </table>       
+    </div>
+</div>
+<!--
+<div>
+    <qrcode [qrdata]="'Your QR code data string'" [size]="2000" [level]="'M'"></qrcode>
+    <qrcode [qrdata]="'麥耀鈞'" [size]="200" [level]="'M'"></qrcode>
+</div>
+-->

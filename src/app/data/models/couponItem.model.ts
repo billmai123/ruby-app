@@ -1,0 +1,29 @@
+export class CouponItemModel{
+    id:string;
+    couponItemCode:string;
+    couponType:string;
+    name:string;
+    description:string;
+    imageUrl:string;
+    glAccount:string;
+    issueBu:string;
+    issueBrand:string;
+    tnc:string;
+    appliedBrand:any[];
+    defaultExpiryDate:string;
+    validPeriodOffset:number;
+    validPeriodLength:number;
+    applyRuleSet:string;
+    instanceLimit:number;
+    minOrderAmount:number;
+    productPurchased:string;
+    isMultipleUse:boolean;
+    redemptionQuota:number;
+    initBalance:number;
+    giftProduct:string;
+    nonProductService:string;
+    discountedPrice:number;
+    discountRate:number;
+    loyaltyPointMultiplier?:number;
+    loyaltyPointEarn?:number;
+}
